@@ -31,15 +31,52 @@ class result extends Component {
 
         this.state.final_result = Math.round(this.props.navigation.state.params.final_result);
         console.log('C_ID', this.state.final_result);
-        if (this.state.final_result >= 0 && this.state.final_result <= 4) {
-            this.setState({ text_result: "Value of your test  was" + " " + this.state.final_result, });
-            this.setState({ res: "Your healthy is awesome", });
-        } else if (this.state.final_result > 4 && this.state.final_result < 7) {
-            this.setState({ text_result: "Value of your was" + " " + this.state.final_result, });
-            this.setState({ res: "Take care your healthy" + " " + " Do exercise", });
+
+        if (this.state.value1 < 5 && this.state.value2 < 5 && this.state.value3 < 5) {
+
+          //  this.setState({ text_result: "Value of your test  was" + " " + this.state.final_result, });
+            this.setState({ res: "Your healthy is a Best", });
+
+
+        } else if (this.state.value1 > 5 && this.state.value2 < 5 && this.state.value3 < 5) {
+
+          //  this.setState({ text_result: "Value of your test  was" + " " + this.state.final_result, });
+            this.setState({ res: "Your healthy is a Normal", });
+
+
+        } else if (this.state.value1 < 5 && this.state.value2 > 5 && this.state.value3 < 5) {
+
+          //  this.setState({ text_result: "Value of your test  was" + " " + this.state.final_result, });
+            this.setState({ res: "Your healthy is a Normal", });
+
+
+        } else if (this.state.value1 < 5 && this.state.value2 < 5 && this.state.value3 > 5) {
+
+         //   this.setState({ text_result: "Value of your test  was" + " " + this.state.final_result, });
+            this.setState({ res: "Your healthy is a Normal", });
+
+
+        } else if (this.state.value1 < 5 && this.state.value2 > 5 && this.state.value3 > 5) {
+
+          //  this.setState({ text_result: "Value of your test  was" + " " + this.state.final_result, });
+            this.setState({ res: "Your healthy is a Worst", });
+
+
+        } else if (this.state.value1 > 5 && this.state.value2 > 5 && this.state.value3 < 5) {
+
+           // this.setState({ text_result: "Value of your test  was" + " " + this.state.final_result, });
+            this.setState({ res: "Your healthy is a Worst", });
+
+
+        } else if (this.state.value1 > 5 && this.state.value2 < 5 && this.state.value3 < 5) {
+
+           // this.setState({ text_result: "Value of your test  was" + " " + this.state.final_result, });
+            this.setState({ res: "Your healthy is a Worst", });
+
+
         } else {
-            this.setState({ text_result: "Value of your was" + " " + this.state.final_result, });
-            this.setState({ res: "You must go to  doctor", });
+            //this.setState({ text_result: "Value of your test  was" + " " + this.state.final_result, });
+            this.setState({ res: "Your healthy is a Worst", });
         }
     }
 
